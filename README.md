@@ -9,6 +9,8 @@ node-ffi-napi
 [![Coverage Status](https://coveralls.io/repos/node-ffi-napi/node-ffi-napi/badge.svg?branch=master)](https://coveralls.io/r/node-ffi-napi/node-ffi-napi?branch=master)
 [![Dependency Status](https://david-dm.org/node-ffi-napi/node-ffi-napi.svg?style=flat)](https://david-dm.org/node-ffi-napi/node-ffi-napi)
 
+fix bug: "crash in v8::ArrayBuffer::GetBackingStore"
+
 `node-ffi-napi` is a Node.js addon for loading and calling dynamic libraries
 using pure JavaScript. It can be used to create bindings to native libraries
 without writing any C++ code.
