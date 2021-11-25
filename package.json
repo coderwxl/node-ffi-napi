@@ -1,6 +1,6 @@
 {
-  "name": "ffi-napi",
-  "version": "4.0.3",
+  "name": "@coderwxl/ffi-napi",
+  "version": "5.0.1",
   "license": "MIT",
   "author": "Anna Henningsen <anna@addaleax.net>",
   "contributors": [
@@ -8,7 +8,7 @@
     "Nathan Rajlich <nathan@tootallnate.net>",
     "Gabor Mezo <gabor.mezo@outlook.com>"
   ],
-  "description": "A foreign function interface (FFI) for Node.js, N-API style",
+  "description": "A foreign function interface (FFI) for Node.js, N-API style. fix bug: \"crash in v8::ArrayBuffer::GetBackingStore\"",
   "keywords": [
     "foreign",
     "function",
@@ -20,7 +20,7 @@
     "napi",
     "stable"
   ],
-  "homepage": "http://github.com/node-ffi-napi/node-ffi-napi",
+  "homepage": "http://github.com/coderwxl/node-ffi-napi",
   "engines": {
     "node": ">=10"
   },
@@ -30,7 +30,7 @@
     "get-uv-event-loop-napi-h": "^1.0.5",
     "node-addon-api": "^3.0.0",
     "node-gyp-build": "^4.2.1",
-    "ref-napi": "../ref-napi-ng",
+    "@coderwxl/ref-napi": "^4.0.1",
     "ref-struct-di": "^1.1.0"
   },
   "devDependencies": {
@@ -44,14 +44,13 @@
   "scripts": {
     "install": "node-gyp-build",
     "prebuild": "prebuildify --napi --tag-armv --tag-uv",
-    "prepack": "prebuildify-ci download && ([ $(ls prebuilds | wc -l) = '5' ] || (echo 'Some prebuilds are missing'; exit 1))",
     "test": "node-gyp rebuild --directory test && nyc mocha --expose-gc --reporter spec"
   },
   "repository": {
     "type": "git",
-    "url": "http://github.com/node-ffi-napi/node-ffi-napi.git"
+    "url": "http://github.com/coderwxl/node-ffi-napi.git"
   },
   "bugs": {
-    "url": "http://github.com/node-ffi-napi/node-ffi-napi/issues"
+    "url": "http://github.com/coderwxl/node-ffi-napi/issues"
   }
 }
